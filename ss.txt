@@ -1,0 +1,33 @@
+
+To set up a playwright  project in your system
+Npm init playwright
+	
+To run the playwright test file
+Npx playwright test
+
+To run the playwright test in debug mode 
+npx playwright test --debug
+
+## Codegen feature to test with Playwright 
+npx playwright codegeen url 
+
+##To turn on the screenshots and trace on in your playwright project 
+Navigate to the playwright.config.js and  add the followingcode to your  playwright project
+   {
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] ,screenshot:'on',trace:'on'},
+     
+    },
+
+If you wish to have the traces only for failed test cases then 
+     {
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] ,screenshot:'on',trace:'retain-on-failure'},
+     
+    },
+
+
+// To run the UI interface we have the following command 
+npx playwright test --ui 
+
+//After creating your feature file run npx cucumber-js
